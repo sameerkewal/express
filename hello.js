@@ -9,7 +9,6 @@ app.all('/test', (req, res) => {
         response_type: 'code',
         scope: 'identify email'
     })
-    res.send(`${authorizeUrl}?${queryParams}`);
     res.redirect(`${authorizeUrl}?${queryParams}`)
 })
 app.listen(process.env.PORT || 3000)
