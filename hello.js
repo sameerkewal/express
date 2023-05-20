@@ -19,6 +19,8 @@ app.all('/test2', async (req, res) => {
     const tokenParams = querystring.stringify({
         client_id: process.env.DISCORD_CLIENT_ID,
         client_secret: process.env.DISCORD_TOKEN,
+        grant_type: 'authorization_code',
+        code: code,
         redirect_uri: 'https://testing-7c5bf.firebaseapp.com/'
     })
 
