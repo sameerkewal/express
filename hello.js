@@ -14,7 +14,7 @@ app.all('/test', (req, res) => {
 
 
 app.all('/test2', async (req, res) => {
-    const code = 'cRoay1UXN6CDwTMLUNGYbmeR7rmU53';
+    const code = 'HLMhVCuV2U9TGXH63vnvYKi0qufRBT';
     const tokenUrl = 'https://discord.com/api/oauth2/token';
     const tokenParams = querystring.stringify({
         client_id: process.env.DISCORD_CLIENT_ID,
@@ -23,7 +23,7 @@ app.all('/test2', async (req, res) => {
         code: code,
         redirect_uri: 'https://testing-7c5bf.firebaseapp.com/'
     })
-
+        console.log(process.env.DISCORD_TOKEN)
     const response = await fetch(tokenUrl, {
         method: "POST",
         headers:{
@@ -32,6 +32,7 @@ app.all('/test2', async (req, res) => {
         body: tokenParams
     })
     const data = await response.json()
+    console.log(data)
     const accessToken = data.access_token;
    console.log(accessToken)
     res.send('access_token: ' + accessToken)
