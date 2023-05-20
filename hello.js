@@ -32,7 +32,7 @@ app.all('/test2', async (req, res) => {
     const data = await response.json()
     const accessToken = data.access_token;
 
-    res.send(accessToken)
+    res.send('access_token: ' + accessToken)
 })
 
 app.listen(process.env.PORT || 3000)
