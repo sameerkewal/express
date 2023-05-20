@@ -14,11 +14,11 @@ app.all('/test', (req, res) => {
 
 
 app.all('/test2', async (req, res) => {
-    const code = 'HLMhVCuV2U9TGXH63vnvYKi0qufRBT';
+    const code = 'dCyuexS4tFMdZJ2ITnnr8bRgdusRc5';
     const tokenUrl = 'https://discord.com/api/oauth2/token';
     const tokenParams = querystring.stringify({
         client_id: process.env.DISCORD_CLIENT_ID,
-        client_secret: process.env.DISCORD_TOKEN,
+        client_secret: process.env.DISCORD_CLIENT_SECRET,
         grant_type: 'authorization_code',
         code: code,
         redirect_uri: 'https://testing-7c5bf.firebaseapp.com/'
