@@ -1,5 +1,6 @@
 const express = require('express')
 const querystring = require("querystring");
+const {test} = require("./firebase");
 const app = express()
 app.all('/test', (req, res) => {
     const authorizeUrl = `https://discord.com/api/oauth2/authorize`;
@@ -36,6 +37,12 @@ app.all('/test2', async (req, res) => {
     const accessToken = data.access_token;
    console.log(accessToken)
     res.send('access_token: ' + accessToken)
+})
+
+
+
+app.all('yo', async (req, res)=>{
+res.send(await test())
 })
 
 app.listen(process.env.PORT || 3000)
