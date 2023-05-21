@@ -41,7 +41,7 @@ app.all('/test2', async (req, res) => {
 
 
 
-app.all('yo', async (req, res)=>{
+app.all('/yo', async (req, res)=>{
 res.send(await test())
 })
 
