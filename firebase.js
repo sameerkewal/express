@@ -24,7 +24,7 @@ const db = getFirestore()
 async function signIn(){
     const auth = getAuth()
 
-    signInWithEmailAndPassword(auth, process.env.email, process.env.password).then((cred)=>{
+        signInWithEmailAndPassword(auth, process.env.EMAIL, process.env.PASSWORD).then((cred)=>{
         /*  console.log(cred.user.uid)*/
         const uid = auth.currentUser.uid
         /*    console.log('uid: ' + uid)*/
