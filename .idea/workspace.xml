@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="af9d6452-8961-423a-975a-6ecdfa97098f" name="Changes" comment="yeah">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.js" beforeDir="false" afterPath="$PROJECT_DIR$/hello.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -29,22 +29,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "javascript.nodejs.core.library.configured.version": "18.14.1",
-    "javascript.nodejs.core.library.typings.version": "18.14.1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.14.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.14.1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,7 +53,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684558394422</updated>
-      <workItem from="1684558395447" duration="2028000" />
+      <workItem from="1684558395447" duration="4154000" />
+      <workItem from="1684637401920" duration="764000" />
     </task>
     <task id="LOCAL-00001" summary="yeah">
       <option name="closed" value="true" />
@@ -103,7 +104,103 @@
       <option name="project" value="LOCAL" />
       <updated>1684560114046</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684560448914</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684560448914</updated>
+    </task>
+    <task id="LOCAL-00008" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684560497930</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684560497930</updated>
+    </task>
+    <task id="LOCAL-00009" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684561323010</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684561323010</updated>
+    </task>
+    <task id="LOCAL-00010" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684561417752</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684561417752</updated>
+    </task>
+    <task id="LOCAL-00011" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684561474506</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684561474506</updated>
+    </task>
+    <task id="LOCAL-00012" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684561619811</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684561619811</updated>
+    </task>
+    <task id="LOCAL-00013" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684561667667</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684561667667</updated>
+    </task>
+    <task id="LOCAL-00014" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684561734743</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684561734743</updated>
+    </task>
+    <task id="LOCAL-00015" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684561834025</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1684561834025</updated>
+    </task>
+    <task id="LOCAL-00016" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684561921902</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1684561921902</updated>
+    </task>
+    <task id="LOCAL-00017" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684562268655</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1684562268655</updated>
+    </task>
+    <task id="LOCAL-00018" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684562521011</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1684562521011</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
