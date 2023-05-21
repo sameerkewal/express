@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af9d6452-8961-423a-975a-6ecdfa97098f" name="Changes" comment="yeah">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="af9d6452-8961-423a-975a-6ecdfa97098f" name="Changes" comment="yeah" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684558394422</updated>
       <workItem from="1684558395447" duration="4154000" />
-      <workItem from="1684637401920" duration="1045000" />
+      <workItem from="1684637401920" duration="1370000" />
     </task>
     <task id="LOCAL-00001" summary="yeah">
       <option name="closed" value="true" />
@@ -208,7 +206,23 @@
       <option name="project" value="LOCAL" />
       <updated>1684640418900</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684640537617</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1684640537617</updated>
+    </task>
+    <task id="LOCAL-00021" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684640774652</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1684640774652</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
