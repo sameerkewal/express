@@ -38,6 +38,8 @@ app.all('/test2', async (req, res) => {
     console.log(data)
     const accessToken = data.access_token;
     const refreshToken = data.refresh_token;
+    localStorage.setItem("access_token", accessToken)
+    localStorage.setItem("refresh_token", refreshToken)
     res.send({accessToken, refreshToken})
 })
 
