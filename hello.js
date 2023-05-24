@@ -16,7 +16,8 @@ app.all('/test', (req, res) => {
 
 app.all('/test2', async (req, res) => {
     const code = req.query.code;
-    console.log(code)
+    console.log('code: ' + code)
+
     const tokenUrl = 'https://discord.com/api/oauth2/token';
     const tokenParams = querystring.stringify({
         client_id: process.env.DISCORD_CLIENT_ID,
