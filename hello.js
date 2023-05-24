@@ -6,7 +6,7 @@ app.all('/test', (req, res) => {
     const authorizeUrl = `https://discord.com/api/oauth2/authorize`;
     const queryParams = querystring.stringify({
         client_id: process.env.DISCORD_CLIENT_ID,
-        redirect_uri:'https://testing-7c5bf.firebaseapp.com/',
+        redirect_uri:'http://localhost:5000/',
         response_type: 'code',
         scope: 'identify email'
     })
@@ -22,7 +22,7 @@ app.all('/test2', async (req, res) => {
         client_secret: process.env.DISCORD_CLIENT_SECRET,
         grant_type: 'authorization_code',
         code: code,
-        redirect_uri: 'https://testing-7c5bf.firebaseapp.com/'
+        redirect_uri: 'http://localhost:5000/'
     })
         console.log(process.env.DISCORD_TOKEN)
     const response = await fetch(tokenUrl, {
