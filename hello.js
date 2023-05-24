@@ -15,7 +15,8 @@ app.all('/test', (req, res) => {
 
 
 app.all('/test2', async (req, res) => {
-    const code = 'dCyuexS4tFMdZJ2ITnnr8bRgdusRc5';
+    const code = req.query.code;
+    console.log(code)
     const tokenUrl = 'https://discord.com/api/oauth2/token';
     const tokenParams = querystring.stringify({
         client_id: process.env.DISCORD_CLIENT_ID,
@@ -44,6 +45,8 @@ app.all('/test2', async (req, res) => {
 app.all('/yo', async (req, res)=>{
 res.send(await test())
 })
+
+
 
 app.listen(process.env.PORT || 3000)
 
