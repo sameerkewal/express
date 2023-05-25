@@ -26,6 +26,11 @@ app.all('/test2', async (req, res) => {
         code: code,
         redirect_uri: 'http://localhost:5000/'
     })
+
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
         console.log(process.env.DISCORD_TOKEN)
     const response = await fetch(tokenUrl, {
         method: "POST",
