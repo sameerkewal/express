@@ -37,14 +37,18 @@ async function signIn(){
 async function realTimeUsernames(){
     const arr = [];
     const colRef = collection(db, 'usernames')
-    onSnapshot(colRef, (snapshot)=>{
+/*    onSnapshot(colRef, (snapshot)=>{
         snapshot.docs.forEach((doc)=>{
             console.log('data changed!')
             console.log(doc.data())
             arr.push(doc)
         })
     })
-    return arr;
+    return arr;*/
+    getDocs(colRef).then((snapshot)=>{
+        console.log(snapshot.doscs)
+    })
+
 
 }
 
