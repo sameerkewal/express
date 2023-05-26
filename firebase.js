@@ -46,6 +46,7 @@ async function realTimeUsernames(){
 }
 
 async function realTimeStorage(){
+    console.log('lmfaouhm2')
     const colref = collection(db, 'storage');
     onSnapshot(colref, (snapshot)=>{
         snapshot.docs.forEach((doc)=>{
