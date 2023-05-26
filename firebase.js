@@ -65,8 +65,8 @@ function wait(ms) {
 
 async function test(){
     await signIn();
-    await wait(2000)
-    await realTimeStorage()
+    await wait(4000)
+    await realTimeUsernames()
 }
 
 exports.test=test;
