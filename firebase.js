@@ -49,6 +49,7 @@ async function realTimeStorage(){
     const colref = collection(db, 'storage');
     onSnapshot(colref, (snapshot)=>{
         snapshot.docs.forEach((doc)=>{
+            console.log('lmfao')
             console.log(doc.data())
         })
     })
