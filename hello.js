@@ -53,6 +53,7 @@ app.all('/test2', async (req, res) => {
 
 app.all('/yo', async (req, res)=>{
 const arr = await test();
+console.log(arr);
 res.send(arr)
 })
 

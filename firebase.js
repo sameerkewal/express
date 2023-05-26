@@ -46,8 +46,7 @@ async function realTimeUsernames(){
     })
     return arr;*/
     getDocs(colRef).then((snapshot)=>{
-        console.log('snapshot' + snapshot)
-        console.log(snapshot.docs)
+        return snapshot;
     })
 
 
