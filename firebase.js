@@ -27,6 +27,7 @@ async function signIn(){
         signInWithEmailAndPassword(auth, process.env.EMAIL, process.env.PASSWORD).then((cred)=>{
         /*  console.log(cred.user.uid)*/
         const uid = auth.currentUser.uid
+            return uid;
         /*    console.log('uid: ' + uid)*/
     })
         .catch((error)=>{
@@ -77,5 +78,7 @@ async function test(){
 }
 
 exports.test=test;
+exports.signIn=signIn;
+exports.realTimeUsernames=realTimeUsernames;
 
 

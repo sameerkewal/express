@@ -1,6 +1,6 @@
 const express = require('express')
 const querystring = require("querystring");
-const {test} = require("./firebase");
+const {test, signIn} = require("./firebase");
 const {getUsername} = require("./utils")
 const app = express()
 app.all('/test', (req, res) => {
@@ -52,7 +52,7 @@ app.all('/test2', async (req, res) => {
 
 
 app.all('/yo', async (req, res)=>{
-const arr = await test();
+const arr = await signIn();
 console.log(arr);
 res.send(arr)
 })
