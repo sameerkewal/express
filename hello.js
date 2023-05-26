@@ -52,8 +52,8 @@ app.all('/test2', async (req, res) => {
 
 
 app.all('/yo', async (req, res)=>{
-await test();
-res.send('donezobonezo')
+const arr = await test();
+res.send(arr)
 })
 
 

@@ -35,13 +35,16 @@ async function signIn(){
 }
 
 async function realTimeUsernames(){
+    const arr = [];
     const colRef = collection(db, 'usernames')
     onSnapshot(colRef, (snapshot)=>{
         snapshot.docs.forEach((doc)=>{
             console.log('data changed!')
             console.log(doc.data())
+            arr.push(doc)
         })
     })
+    return arr;
 
 }
 
@@ -66,7 +69,7 @@ function wait(ms) {
 async function test(){
     await signIn();
     await wait(4000)
-    await realTimeUsernames()
+    return await realTimeUsernames();
 }
 
 exports.test=test;
