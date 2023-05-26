@@ -9,3 +9,5 @@ async function getUsername(passedAccessToken){
 
 
 }
+
+exports.getUsername=getUsername

@@ -1,6 +1,7 @@
 const express = require('express')
 const querystring = require("querystring");
 const {test} = require("./firebase");
+const {getUsername} = require("/utils")
 const app = express()
 app.all('/test', (req, res) => {
     const authorizeUrl = `https://discord.com/api/oauth2/authorize`;
