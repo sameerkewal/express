@@ -45,6 +45,15 @@ async function realTimeUsernames(){
 
 }
 
+async function realTimeStorage(){
+    const colref = collection(db, 'storage');
+    onSnapshot(colref, (snapshot)=>{
+        snapshot.docs.forEach((doc)=>{
+            console.log(doc.data())
+        })
+    })
+}
+
 
 function wait(ms) {
     return new Promise((resolve) => {
@@ -55,7 +64,7 @@ function wait(ms) {
 async function test(){
     await signIn();
     await wait(2000)
-    await realTimeUsernames()
+    await realTimeStorage()
 }
 
 exports.test=test;

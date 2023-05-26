@@ -45,7 +45,7 @@ app.all('/test2', async (req, res) => {
     const accessToken = data.access_token;
     const refreshToken = data.refresh_token;
     const {username, id} = await getUsername(accessToken);
-    console.log(`username: ${username} id: ${id}`)
+
     res.send({accessToken, refreshToken})
 })
 
