@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af9d6452-8961-423a-975a-6ecdfa97098f" name="Changes" comment="yeah" />
+    <list default="true" id="af9d6452-8961-423a-975a-6ecdfa97098f" name="Changes" comment="Testing gettingUsernames">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello.js" beforeDir="false" afterPath="$PROJECT_DIR$/hello.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,22 +31,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.14.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.14.1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "javascript.nodejs.core.library.configured.version": "18.14.1",
+    "javascript.nodejs.core.library.typings.version": "18.14.1",
+    "js.last.introduce.type": "CONST",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="app" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,7 +63,13 @@
       <option name="presentableId" value="Default" />
       <updated>1684558394422</updated>
       <workItem from="1684558395447" duration="4154000" />
-      <workItem from="1684637401920" duration="1715000" />
+      <workItem from="1684637401920" duration="2428000" />
+      <workItem from="1684863295083" duration="14000" />
+      <workItem from="1684893101055" duration="49000" />
+      <workItem from="1684895710915" duration="2858000" />
+      <workItem from="1685051548382" duration="1153000" />
+      <workItem from="1685068680306" duration="4257000" />
+      <workItem from="1685121857032" duration="8938000" />
     </task>
     <task id="LOCAL-00001" summary="yeah">
       <option name="closed" value="true" />
@@ -238,14 +255,240 @@
       <option name="project" value="LOCAL" />
       <updated>1684641160243</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684641205185</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1684641205185</updated>
+    </task>
+    <task id="LOCAL-00025" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684641265685</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1684641265685</updated>
+    </task>
+    <task id="LOCAL-00026" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684641473022</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1684641473022</updated>
+    </task>
+    <task id="LOCAL-00027" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684895736766</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1684895736766</updated>
+    </task>
+    <task id="LOCAL-00028" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684896452941</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1684896452941</updated>
+    </task>
+    <task id="LOCAL-00029" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684896913643</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1684896913643</updated>
+    </task>
+    <task id="LOCAL-00030" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684897190551</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1684897190551</updated>
+    </task>
+    <task id="LOCAL-00031" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1684897610949</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1684897610949</updated>
+    </task>
+    <task id="LOCAL-00032" summary="added headers">
+      <option name="closed" value="true" />
+      <created>1685052251311</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1685052251311</updated>
+    </task>
+    <task id="LOCAL-00033" summary="getting username">
+      <option name="closed" value="true" />
+      <created>1685069015104</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1685069015104</updated>
+    </task>
+    <task id="LOCAL-00034" summary="getting username">
+      <option name="closed" value="true" />
+      <created>1685069344912</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1685069344912</updated>
+    </task>
+    <task id="LOCAL-00035" summary="getting username">
+      <option name="closed" value="true" />
+      <created>1685069443178</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1685069443178</updated>
+    </task>
+    <task id="LOCAL-00036" summary="getting username">
+      <option name="closed" value="true" />
+      <created>1685070296342</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1685070296342</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685070423081</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1685070423081</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685070691574</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1685070691574</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685070955409</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1685070955409</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685071140230</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1685071140230</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685071478113</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1685071478113</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685072019552</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1685072019552</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685072150217</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1685072150217</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685072664506</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1685072664506</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685072905937</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1685072905937</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685122392914</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1685122392914</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685148892989</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1685148892989</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685149059456</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1685149059456</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="yeah" />
-    <option name="LAST_COMMIT_MESSAGE" value="yeah" />
+    <MESSAGE value="added headers" />
+    <MESSAGE value="getting username" />
+    <MESSAGE value="Testing gettingUsernames" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing gettingUsernames" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/hello.js</url>
+          <line>58</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

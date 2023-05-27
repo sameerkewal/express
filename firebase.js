@@ -67,10 +67,10 @@ async function realTimeStorage(){
 async function registerDiscordUser(accessToken, refreshToken, username, id){
     const colref = collection(db, 'storage');
     const documentDataDocumentReference = await addDoc(colref, {
-        'accessToken': accessToken,
-        'refreshToken': refreshToken,
-        'username': username,
-        'id': id
+        'discordAccessToken': accessToken,
+        'discordRefreshToken': refreshToken,
+        'discordUsername': username,
+        'discordId': id
     });
     console.log(documentDataDocumentReference.id)
 }

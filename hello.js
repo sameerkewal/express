@@ -53,11 +53,12 @@ app.all('/test2', async (req, res) => {
 
 
 
+
 app.all('/yo', async (req, res) => {
     try {
         const result = await signIn();
         await registerDiscordUser("dkmf", "dj", "d", "idnumber")
-        const shit = await realTimeStorage()
+        const test = await realTimeStorage()
         res.send('result: ' + result);
     } catch (error) {
         console.log(error);
