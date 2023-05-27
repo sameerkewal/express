@@ -1,6 +1,6 @@
 const express = require('express')
 const querystring = require("querystring");
-const {test, signIn} = require("./firebase");
+const {test, signIn, realTimeUsernames, realTimeStorage, registerDiscordUser} = require("./firebase");
 const {getUsername} = require("./utils")
 const app = express()
 app.all('/test', (req, res) => {
@@ -45,20 +45,30 @@ app.all('/test2', async (req, res) => {
     const accessToken = data.access_token;
     const refreshToken = data.refresh_token;
     const {username, id} = await getUsername(accessToken);
+    await registerDiscordUser(accessToken, refreshToken, username, id)
 
     res.send({accessToken, refreshToken})
 })
 
 
 
-app.all('/yo', async (req, res)=>{
-const arr = await signIn();
-console.log(arr);
-res.send(arr)
+app.all('/yo', async (req, res) => {
+    try {
+        const result = await signIn();
+        await registerDiscordUser("dkmf", "dj", "d", "idnumber")
+        const shit = await realTimeStorage()
+        res.send('result: ' + result);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send('An error occurred');
+    }
+});
+
+
+
+
+app.listen(process.env.PORT || 3000, ()=>{
+    console.log('listening on port 3000')
 })
-
-
-
-app.listen(process.env.PORT || 3000)
 
 

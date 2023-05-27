@@ -4,6 +4,9 @@ const {getFirestore, collection, getDocs, getDoc,
     require('firebase/firestore')
 
 const {getAuth, signInWithEmailAndPassword, signOut} = require('firebase/auth')
+const dotenv = require('dotenv');
+dotenv.config();
+
 
 const firebaseConfig = {
     apiKey: process.env.apiKey,
@@ -22,35 +25,32 @@ initializeApp(firebaseConfig)
 const db = getFirestore()
 
 async function signIn(){
+    console.log(process.env.apiKey);
+    console.log(process.env.EMAIL);
+    console.log(process.env.PASSWORD)
     const auth = getAuth()
 
-        signInWithEmailAndPassword(auth, process.env.EMAIL, process.env.PASSWORD).then((cred)=>{
-        /*  console.log(cred.user.uid)*/
-        const uid = auth.currentUser.uid
-            return uid;
-        /*    console.log('uid: ' + uid)*/
-    })
-        .catch((error)=>{
-            console.log(error)
-        })
+    try {
+        const userCredential = await signInWithEmailAndPassword(auth, process.env.EMAIL, process.env.PASSWORD)
+        console.log(userCredential.user.uid)
+        return userCredential.user.uid
+    }catch(error){
+        console.log(error)
+        throw error
+    }
 }
 
 async function realTimeUsernames(){
     const arr = [];
     const colRef = collection(db, 'usernames')
-/*    onSnapshot(colRef, (snapshot)=>{
+    onSnapshot(colRef, (snapshot)=>{
         snapshot.docs.forEach((doc)=>{
-            console.log('data changed!')
             console.log(doc.data())
-            arr.push(doc)
+            arr.push(doc.data())
         })
+        console.log('length: ' + arr.length)
     })
-    return arr;*/
-    getDocs(colRef).then((snapshot)=>{
-        return snapshot;
-    })
-
-
+    return arr;
 }
 
 async function realTimeStorage(){
@@ -59,26 +59,29 @@ async function realTimeStorage(){
     onSnapshot(colref, (snapshot)=>{
         snapshot.docs.forEach((doc)=>{
             console.log('lmfao')
-            console.log(doc.data())
+            /*console.log(doc.data())*/
         })
     })
 }
 
-
-function wait(ms) {
-    return new Promise((resolve) => {
-        setTimeout(resolve, ms);
+async function registerDiscordUser(accessToken, refreshToken, username, id){
+    const colref = collection(db, 'storage');
+    const documentDataDocumentReference = await addDoc(colref, {
+        'accessToken': accessToken,
+        'refreshToken': refreshToken,
+        'username': username,
+        'id': id
     });
+    console.log(documentDataDocumentReference.id)
 }
 
-async function test(){
-    await signIn();
-    await wait(4000)
-    return await realTimeUsernames();
-}
 
-exports.test=test;
+
+
+
 exports.signIn=signIn;
 exports.realTimeUsernames=realTimeUsernames;
+exports.realTimeStorage=realTimeStorage;
+exports.registerDiscordUser=registerDiscordUser;
 
 

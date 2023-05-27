@@ -10,4 +10,12 @@ async function getUsername(passedAccessToken){
 
 }
 
+
+function wait(ms) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+    });
+}
+
 exports.getUsername=getUsername
+exports.wait = wait
