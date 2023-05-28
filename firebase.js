@@ -5,6 +5,7 @@ const {getFirestore, collection, getDocs, getDoc,
 
 const {getAuth, signInWithEmailAndPassword, signOut} = require('firebase/auth')
 const dotenv = require('dotenv');
+const {del} = require("express/lib/application");
 dotenv.config();
 
 
@@ -25,14 +26,10 @@ initializeApp(firebaseConfig)
 const db = getFirestore()
 
 async function signIn(){
-    console.log(process.env.apiKey);
-    console.log(process.env.EMAIL);
-    console.log(process.env.PASSWORD)
     const auth = getAuth()
 
     try {
         const userCredential = await signInWithEmailAndPassword(auth, process.env.EMAIL, process.env.PASSWORD)
-        console.log(userCredential.user.uid)
         return userCredential.user.uid
     }catch(error){
         console.log(error)
@@ -64,15 +61,55 @@ async function realTimeStorage(){
     })
 }
 
-async function registerDiscordUser(accessToken, refreshToken, username, id){
+async function registerDiscordUser(discordAccessToken, discordRefreshToken, discordUsername, discordId){
     const colref = collection(db, 'storage');
     const documentDataDocumentReference = await addDoc(colref, {
-        'discordAccessToken': accessToken,
-        'discordRefreshToken': refreshToken,
-        'discordUsername': username,
-        'discordId': id
+        'discordAccessToken': discordAccessToken,
+        'discordRefreshToken': discordRefreshToken,
+        'discordUsername': discordUsername,
+        'discordId': discordId
     });
-    console.log(documentDataDocumentReference.id)
+    console.log('added document with id: ' + documentDataDocumentReference.id)
+}
+
+
+async function findRefreshToken(discordId){
+    //todo: remove hardcoded values here
+
+
+
+
+    return refreshToken;
+}
+
+async function findToken(discordId){
+    const colref = collection(db, 'storage');
+    const q = query(colref, where("discordId", "==", "969232481045856326"))
+    let idToDelete;
+
+    return new Promise((resolve, reject)=>{
+        onSnapshot(q, (snapshot)=>{
+            if(!snapshot.empty){
+                resolve(snapshot.docs[0].id)
+            } else {
+                resolve(null)
+            }
+            }, (error)=>{
+            reject(error)
+        })
+        })
+    }
+
+
+
+
+
+async function deleteIf(idToDelete){
+    console.log('id to delete: ' + idToDelete)
+    const docRef = doc(db, 'storage', idToDelete);
+    await deleteDoc(docRef)
+    return 1;
+
 }
 
 
@@ -83,5 +120,8 @@ exports.signIn=signIn;
 exports.realTimeUsernames=realTimeUsernames;
 exports.realTimeStorage=realTimeStorage;
 exports.registerDiscordUser=registerDiscordUser;
+exports.findRefreshToken=findRefreshToken;
+exports.findToken = findToken
+exports.deleteIf=deleteIf;
 
 
