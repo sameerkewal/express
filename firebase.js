@@ -1,6 +1,7 @@
 const {initializeApp} = require('firebase/app')
 const {getFirestore, collection, getDocs, getDoc,
-    addDoc, deleteDoc, doc, query, where, onSnapshot} =
+    addDoc, deleteDoc, doc, query, where, onSnapshot,
+updateDoc} =
     require('firebase/firestore')
 
 const {getAuth, signInWithEmailAndPassword, signOut} = require('firebase/auth')
@@ -72,6 +73,30 @@ async function registerDiscordUser(discordAccessToken, discordRefreshToken, disc
     console.log('added document with id: ' + documentDataDocumentReference.id)
 }
 
+async function registerSpotifyUser(spotifyAccessToken, spotifyRefreshToken, spotifyUsername, discordAccessToken){
+    await signIn();
+    let ref = null
+    const colref = collection(db, 'storage');
+    const q = query(colref, where("discordAccessToken", "==", discordAccessToken));
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc)=>{
+        console.log(doc.data())
+        ref = doc.id
+    })
+    const refToUpdate = doc(db, 'storage', ref);
+    try {
+        const updatedDoc = await updateDoc(refToUpdate, {
+            spotifyAccessToken: spotifyAccessToken,
+            spotifyRefreshToken: spotifyRefreshToken,
+            spotifyUsername: spotifyUsername,
+        });
+        console.log('document updated!')
+    }catch(error){
+        console.log('Error updating document ', error)
+    }
+
+}
+
 
 async function findRefreshToken(discordId){
     //todo: remove hardcoded values here
@@ -84,7 +109,7 @@ async function findRefreshToken(discordId){
 
 async function findToken(discordId){
     const colref = collection(db, 'storage');
-    const q = query(colref, where("discordId", "==", "969232481045856326"))
+    const q = query(colref, where("discordId", "==", discordId))
     let idToDelete;
 
     return new Promise((resolve, reject)=>{
@@ -123,5 +148,6 @@ exports.registerDiscordUser=registerDiscordUser;
 exports.findRefreshToken=findRefreshToken;
 exports.findToken = findToken
 exports.deleteIf=deleteIf;
+exports.registerSpotifyUser= registerSpotifyUser;
 
 

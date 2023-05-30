@@ -1,16 +1,21 @@
 const express = require('express')
 const querystring = require("querystring");
 const {test, signIn, realTimeUsernames, realTimeStorage, registerDiscordUser, findRefreshToken, findToken, deleteIf
-} = require("./firebase");
+, registerSpotifyUser} = require("./firebase");
 const {getUsername, wait} = require("./utils")
-const {getSpotifyTokens} = require("./Spot")
+const {redirectToAuthCodeFlow, generateCodeChallenge, generateCodeVerifier, getAccessToken, fetchProfile} = require("./Spot")
 const app = express()
+const cors = require('cors')
+const {json} = require("express");
 
+
+app.use(cors())
+app.use(json())
 app.all('/test', (req, res) => {
     const authorizeUrl = `https://discord.com/api/oauth2/authorize`;
     const queryParams = querystring.stringify({
         client_id: process.env.DISCORD_CLIENT_ID,
-        redirect_uri:'http://localhost:5000/',
+        redirect_uri:'https://testing-7c5bf.web.app',
         response_type: 'code',
         scope: 'identify email'
     })
@@ -28,12 +33,13 @@ app.all('/test2', async (req, res) => {
         client_secret: process.env.DISCORD_CLIENT_SECRET,
         grant_type: 'authorization_code',
         code: code,
-        redirect_uri: 'http://localhost:5000/'
+        redirect_uri: 'https://testing-7c5bf.web.app'
     })
-
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5000');
+    res.setHeader('Access-Control-Allow-Origin', 'https://testing-7c5bf.web.app');
+ /*   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5000');*/
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
 
         console.log(process.env.DISCORD_TOKEN)
     const response = await fetch(tokenUrl, {
@@ -122,15 +128,49 @@ app.all('/refresh', async (req, res)=>{
 
 })
 
-app.all('/yo2', async (req, res)=>{
-    await getSpotifyTokens()
+app.all('/redirectToSpot', async (req, res)=>{
+    await redirectToAuthCodeFlow(process.env.SPOTIFY_CLIENT_ID, res)
+
+
 })
 
+app.all('/getAccessAndRefresh', async (req, res)=>{
+    const code = req.query.code;
+   const {access_token, refresh_token} = await getAccessToken(process.env.SPOTIFY_CLIENT_ID, code);
+   console.log(access_token, refresh_token)
+    res.setHeader('Access-Control-Allow-Origin', 'https://testing-7c5bf.web.app');
+   /* res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5000');*/
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    const spotProfile = await fetchProfile(access_token)
 
+
+    res.send({access_token, refresh_token, spotifyId: spotProfile.id});
+
+})
+
+app.post('/final', async(req, res)=>{
+    //todo: if reverting back to local testing change res.setHeader!!!!!!! and also
+    //the redirect_uris more importantly
+    //when adding a new user add them to allowlist in spotify developer dashboard
+
+    const {spotifyAccessToken, spotifyRefreshToken, spotifyId, discordAccessToken} = req.body;
+    console.log({spotifyAccessToken, spotifyRefreshToken, spotifyId, discordAccessToken})
+/*    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5000');*/
+    res.setHeader('Access-Control-Allow-Origin', 'https://testing-7c5bf.web.app');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    const code = await registerSpotifyUser(spotifyAccessToken, spotifyRefreshToken, spotifyId, discordAccessToken);
+    res.status(200).send('Success!')
+
+})
 
 
 app.listen(process.env.PORT || 3000, ()=>{
     console.log('listening on port 3000')
 })
+
+
 
 
