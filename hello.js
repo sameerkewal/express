@@ -7,6 +7,7 @@ const {redirectToAuthCodeFlow, generateCodeChallenge, generateCodeVerifier, getA
 const app = express()
 const cors = require('cors')
 const {json} = require("express");
+require('dotenv').config();
 
 
 app.use(cors())
