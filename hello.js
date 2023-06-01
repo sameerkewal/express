@@ -166,6 +166,11 @@ app.post('/final', async(req, res)=>{
 
 })
 
+app.all('/uhm', async(req, res)=>{
+    console.log(process.env.SPOTIFY_CLIENT_ID);
+    res.send('yeeh')
+})
+
 
 app.listen(process.env.PORT || 3000, ()=>{
     console.log('listening on port 3000')

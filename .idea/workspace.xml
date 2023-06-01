@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af9d6452-8961-423a-975a-6ecdfa97098f" name="Changes" comment="Testing gettingUsernames">
+    <list default="true" id="af9d6452-8961-423a-975a-6ecdfa97098f" name="Changes" comment="spotify integration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/firebase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hello.js" beforeDir="false" afterPath="$PROJECT_DIR$/hello.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,24 +30,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "18.14.1",
-    "javascript.nodejs.core.library.typings.version": "18.14.1",
-    "js.last.introduce.type": "CONST",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.14.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.14.1&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="app" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229">
       <method v="2" />
@@ -70,22 +70,16 @@
       <workItem from="1685051548382" duration="1153000" />
       <workItem from="1685068680306" duration="4257000" />
       <workItem from="1685121857032" duration="8938000" />
-    </task>
-    <task id="LOCAL-00001" summary="yeah">
-      <option name="closed" value="true" />
-      <created>1684558881283</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1684558881283</updated>
-    </task>
-    <task id="LOCAL-00002" summary="yeah">
-      <option name="closed" value="true" />
-      <created>1684559115680</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1684559115680</updated>
+      <workItem from="1685154950090" duration="8561000" />
+      <workItem from="1685210604224" duration="14601000" />
+      <workItem from="1685370786105" duration="2517000" />
+      <workItem from="1685379605608" duration="2954000" />
+      <workItem from="1685396254668" duration="3402000" />
+      <workItem from="1685403423650" duration="107000" />
+      <workItem from="1685403796270" duration="2389000" />
+      <workItem from="1685406241216" duration="39000" />
+      <workItem from="1685406751312" duration="584000" />
+      <workItem from="1685556567317" duration="2801000" />
     </task>
     <task id="LOCAL-00003" summary="yeah">
       <option name="closed" value="true" />
@@ -455,7 +449,31 @@
       <option name="project" value="LOCAL" />
       <updated>1685149059456</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Testing gettingUsernames">
+      <option name="closed" value="true" />
+      <created>1685155103660</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1685155103660</updated>
+    </task>
+    <task id="LOCAL-00050" summary="spotify integration">
+      <option name="closed" value="true" />
+      <created>1685314990202</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1685314990202</updated>
+    </task>
+    <task id="LOCAL-00051" summary="spotify integration">
+      <option name="closed" value="true" />
+      <created>1685405096165</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1685405096166</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,18 +495,7 @@
     <MESSAGE value="added headers" />
     <MESSAGE value="getting username" />
     <MESSAGE value="Testing gettingUsernames" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing gettingUsernames" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/hello.js</url>
-          <line>58</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="spotify integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="spotify integration" />
   </component>
 </project>
