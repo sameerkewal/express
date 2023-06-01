@@ -170,7 +170,7 @@ app.post('/final', async(req, res)=>{
 app.all('/uhm', async(req, res)=>{
     console.log(process.env.TEST);
 
-    res.send('yeeh')
+    res.send(process.env.TEST)
 })
 
 
